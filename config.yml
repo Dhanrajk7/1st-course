@@ -1,0 +1,16 @@
+title: 1st
+description: github in n out
+template:
+  repo: 1st-template
+  name: 1st
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
